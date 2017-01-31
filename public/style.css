@@ -1,0 +1,93 @@
+:root{
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(5, 147, 74);
+}
+
+header, main, footer{
+    max-width: 1280px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    margin: 30, auto, 20;
+    background-image: url("./img/navbg.jpg");
+    background-repeat: repeat;
+    flex-wrap: wrap;
+}
+
+main{
+    background: rgb(217, 217, 217);
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap-reverse;
+}
+
+footer{
+    background: rgb(191, 191, 191);
+    padding: 10px 0;
+}
+
+
+
+.leftSide{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSide{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+
+}
+
+.sidePhoto{
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 4em;
+}
+
+.navWrapVer{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.navWrapHor{
+    display: flex;
+    flex-grow: 3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;  
+    min-width: 320px;
+}
+
+.activeTab{
+    padding: 10px 20px;
+    background: rgb(217, 217, 217);
+    border-radius: 3px;
+    font-size: 24px;
+}
+
+a{
+    color: black;
+}
+
+.linkTab{
+    padding: 10px 20px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+
+.linkTab:hover{
+    text-decoration: underline;
+}
