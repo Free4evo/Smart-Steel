@@ -217,6 +217,16 @@ main .leftSide iframe{
 	height: 270px;
 }
 
+@media only screen and (max-width: 400px){
+	main .leftSide img{
+		width: 280px;
+	}
+	main .leftSide iframe{
+		width: 280px;
+		height: 210px;
+	}
+}
+
 main .rightSide{
 	padding: 20px;
 	display: -webkit-box;

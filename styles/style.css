@@ -139,6 +139,17 @@ main{
         }
     }
 
+    @media only screen and (max-width: 400px){
+        .leftSide img{
+            width: 280px;
+        }
+
+        .leftSide iframe{
+            width: 280px;
+            height: 210px;
+        }
+    }
+
     .rightSide{
         padding: 20px;
         display: flex;
