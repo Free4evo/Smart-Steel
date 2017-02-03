@@ -4,14 +4,18 @@
         <meta charset=utf-8>
         <title>Smart Steel Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./reset.css">
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
         <header>
-            <a href="http://www.SmartSteel.eu" class="logo"><img src="./img/logo.png" alt="Smart Steel Logo" width="420px"></a>
+            <a href="http://www.SmartSteel.eu"><img src="/img/logo-320w.png" srcset="/img/logo-800w.png 450w","/img/logo-320w.png 320w" alt="Smart Steel Logo" class="logo"></a>
             <div class="navWrapHor">
+                <div class="langPanel">
+                    <p class="activeTab">EN</p>
+                    <a href="" class="linkTab">RU</a>
+                    <a href="" class="linkTab">ZH</a>
+                </div>
                 <h1>we make the future</h1>
                 <div class="navWrapVer">
                     <p class="activeTab">About us</p>
@@ -21,8 +25,8 @@
         </header>
         <main>
             <div class="leftSide">
-                <img src="./img/steel1.jpg" alt="steel industries photo" width="360" class="sidePhoto">
-                <img src="./img/steel2.jpg" alt="steel industries photo 2" width="360" class="sidePhoto">
+                <img src="/img/steel1.jpg" alt="steel industries photo" class="sidePhoto">
+                <img src="/img/steel2.jpg" alt="steel industries photo 2" class="sidePhoto">
                 <iframe width="360" height="270" src="https://www.youtube.com/embed/9l7JqonyoKA?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="rightSide">
@@ -48,16 +52,14 @@
             </div>
         </main>
         <footer>
-            <div>
+            <div class="footerContacts">
                 <address>
                 Contacts: Smart Steel Sp. z o.o., 35-310 Rzeszow, al. T. Rejtana, 20, Poland
                 </address>             
                 <a href="http://www.SmartSteel.eu">www.SmartSteel.eu</a>  
                 <a href="mailto:INFO@SMARTSTEEL.EU">INFO@SMARTSTEEL.EU</a>
-            </div>
-            <div>
-                <img src="./img/greenCutaway.jpg" alt="Our cutaway" width="200px">
-            </div>
+            </div>      
+            <img src="/img/greenCutaway.jpg" alt="Our cutaway" width="200px" class="cutaway">  
         </footer>
     </body>
 </html>

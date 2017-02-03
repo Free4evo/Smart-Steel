@@ -1,6 +1,59 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 :root{
     font-family: 'Open Sans', sans-serif;
     background: rgb(5, 147, 74);
+}
+
+:root a{
+	color: black;
+}
+
+:root ul li{
+	margin-top: 15px;
+}
+
+:root li{
+	list-style-position: inside;
 }
 
 header, main, footer{
@@ -10,126 +63,219 @@ header, main, footer{
 }
 
 header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin: 30, auto, 20;
     background-image: url("./img/navbg.jpg");
     background-repeat: repeat;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+header .logo{
+	margin: 10px;
+	width: 450px;
+}
+
+header .navWrapVer{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+header .navWrapVer .activeTab{
+	padding: 10px 20px;
+	background: rgb(217, 217, 217);
+	border-radius: 1px;
+	font-size: 24px;
+}
+
+header .navWrapVer .linkTab{
+	padding: 10px 20px;
+	font-size: 24px;
+	color: black;
+	text-decoration: none;
+}
+
+header .navWrapVer .linkTab:hover{
+	text-decoration: underline;
+}
+
+header .navWrapHor{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 3;
+	    -ms-flex-positive: 3;
+	        flex-grow: 3;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	min-width: 320px;
+}
+
+header .navWrapHor .langPanel{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
+}
+
+header .navWrapHor .langPanel .activeTab{
+	padding: 10px 20px;
+	background: rgb(217, 217, 217);
+	border-radius: 1px;
+	font-size: 24px;
+}
+
+header .navWrapHor .langPanel .linkTab{
+	padding: 10px 20px;
+	font-size: 24px;
+	color: black;
+	text-decoration: none;
+}
+
+header .navWrapHor .langPanel .linkTab:hover{
+	text-decoration: underline;
+}
+
+header .navWrapHor h1{
+	font-size: 4em;
+	text-align: center;
 }
 
 main{
     background: rgb(217, 217, 217);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap-reverse;
+            flex-flow: row wrap-reverse;
+}
+
+main p{
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+main .leftSide{
+	padding: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin: 0 auto;
+}
+
+main .leftSide .sidePhoto{
+	margin-bottom: 10px;
+	width: 360px;
+}
+
+main .leftSide .leftSideInv{
+	padding: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column wrap;
+	        flex-flow: column wrap;
+	max-width: 640px;
+}
+
+main .rightSide{
+	padding: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column wrap;
+	        flex-flow: column wrap;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
+	-webkit-box-flex: 2;
+	    -ms-flex-positive: 2;
+	        flex-grow: 2;
+	max-width: 853px;
+}
+
+main .rightSide h2{
+	font-size: 22px;
+}
+
+main .rightSide .underlineText{
+	text-decoration: underline;
+}
+
+main .rightSide .rightSideInv{
+	padding: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column wrap;
+	        flex-flow: column wrap;
+	max-width: 640px;
+}
+
+main .mainInv{
+	background: url("./img/mainInvBackground.jpg") no-repeat;
+	background-size: cover;
+	min-height: 600px;
 }
 
 footer{
     background: rgb(191, 191, 191);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 20px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
-
-
-.leftSide{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+footer .footerContacts{
+	padding-left: 20px;
 }
 
-.leftSideInv, .rightSideInv{
-    padding: 20px;
-    display: flex;
-    flex-flow: column wrap;
-    max-width: 640px;
-}
-
-.rightSide{
-    padding: 20px;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
-    flex-grow: 2;
-}
-
-.sidePhoto{
-    margin-bottom: 10px;
-}
-
-h1{
-    font-size: 4em;
-}
-
-.navWrapVer{
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
-    justify-content: flex-end;
-}
-
-.navWrapHor{
-    display: flex;
-    flex-grow: 3;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;  
-    min-width: 320px;
-}
-
-.activeTab{
-    padding: 10px 20px;
-    background: rgb(217, 217, 217);
-    border-radius: 1px;
-    font-size: 24px;
-}
-
-a{
-    color: black;
-}
-
-.linkTab{
-    padding: 10px 20px;
-    font-size: 24px;
-    color: black;
-    text-decoration: none;
-}
-
-.linkTab:hover{
-    text-decoration: underline;
-}
-
-.logo{
-    margin: 10px;
-}
-
-.underlineText{
-    text-decoration: underline;
-}
-
-h1{
-    text-align: center;
-}
-
-h2{
-    font-size: 22px;
-}
-
-main p{
-    font-size: 16px;
-    margin-top: 15px;
-}
-
-ul li{
-    margin-top: 15px;
-}
-
-.mainInv{
-    background: url("./img/mainInvBackground.jpg") no-repeat;
-    background-size: cover;
-    min-height: 600px;
+footer .cutaway{
+	width:200px;
 }
