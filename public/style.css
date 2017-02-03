@@ -75,9 +75,22 @@ header{
         flex-wrap: wrap;
 }
 
-header .logo{
+header .logo800w{
 	margin: 10px;
 	width: 450px;
+}
+
+header .logo320w{
+	display: none;
+}
+
+@media only screen and (max-width: 450px){
+	header .logo800w{
+		display: none;
+	}
+	header .logo320w{
+		dispaly: initial;
+	}
 }
 
 header .navWrapVer{
