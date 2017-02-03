@@ -89,7 +89,7 @@ header .logo320w{
 		display: none;
 	}
 	header .logo320w{
-		dispaly: initial;
+		display: initial;
 	}
 }
 
@@ -207,21 +207,14 @@ main .leftSide{
 	margin: 0 auto;
 }
 
-main .leftSide .sidePhoto{
+main .leftSide img{
 	margin-bottom: 10px;
 	width: 360px;
 }
 
-main .leftSide .leftSideInv{
-	padding: 20px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-flow: column wrap;
-	        flex-flow: column wrap;
-	max-width: 640px;
+main .leftSide iframe{
+	width: 360px;
+	height: 270px;
 }
 
 main .rightSide{
@@ -249,7 +242,28 @@ main .rightSide .underlineText{
 	text-decoration: underline;
 }
 
-main .rightSide .rightSideInv{
+main .rightSide .partnersLogo {
+	margin-top: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.mainInv{
+        background: url("./img/mainInvBackground.jpg") no-repeat;
+        background-size: cover;
+        min-height: 600px;
+    }
+
+.mainInv .rightSideInv, .mainInv .leftSideInv{
 	padding: 20px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -259,12 +273,6 @@ main .rightSide .rightSideInv{
 	    -ms-flex-flow: column wrap;
 	        flex-flow: column wrap;
 	max-width: 640px;
-}
-
-main .mainInv{
-	background: url("./img/mainInvBackground.jpg") no-repeat;
-	background-size: cover;
-	min-height: 600px;
 }
 
 footer{
@@ -292,3 +300,16 @@ footer .footerContacts{
 footer .cutaway{
 	width:200px;
 }
+
+@media only screen and (max-width: 650px){
+        footer{
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+            padding: 20px 0;
+        }
+        footer .cutaway{
+		width: 320px;
+	}
+    }

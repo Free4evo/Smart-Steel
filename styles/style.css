@@ -44,7 +44,7 @@ header{
         }
 
         .logo320w{
-            dispaly: initial;
+            display: initial;
         }
     }
 
@@ -128,16 +128,14 @@ main{
         flex-direction: column;
         margin: 0 auto;
 
-        .sidePhoto{
+       img{
             margin-bottom: 10px;
             width: 360px;
         }
 
-        .leftSideInv{
-            padding: 20px;
-            display: flex;
-            flex-flow: column wrap;
-            max-width: 640px;
+        iframe{
+            width: 360px;
+            height: 270px;
         }
     }
 
@@ -157,20 +155,30 @@ main{
             text-decoration: underline;
         }
 
-        .rightSideInv{
+        .partnersLogo {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        
+    }
+}
+
+.mainInv{
+        background: url("./img/mainInvBackground.jpg") no-repeat;
+        background-size: cover;
+        min-height: 600px;
+
+        .rightSideInv, .leftSideInv{
             padding: 20px;
             display: flex;
             flex-flow: column wrap;
             max-width: 640px;
         }
     }
-
-    .mainInv{
-        background: url("./img/mainInvBackground.jpg") no-repeat;
-        background-size: cover;
-        min-height: 600px;
-    }
-}
 
 footer{
     background: rgb(191, 191, 191);
@@ -188,3 +196,15 @@ footer{
         width:200px; 
     }
 }
+
+@media only screen and (max-width: 650px){
+        footer{
+            flex-direction: column-reverse;
+            padding: 20px 0;
+
+
+            .cutaway{
+                width: 320px;
+            }
+        }
+    }
